@@ -23,7 +23,7 @@ xinput set-prop 'Logitech Wireless Mouse' 'libinput Accel Speed' -0.8
 
 $HOME/.config/polybar/launch.sh
 
-feh --bg-fill $HOME/.config/backgrounds/82.jpg
+feh --bg-fill $HOME/.config/backgrounds/90.jpg
 
 xsetroot -cursor_name left_ptr &
 
@@ -31,5 +31,5 @@ picom &
 xinput set-prop 'ASUE1409:00 04F3:3157 Touchpad' 'libinput Tapping Enabled' 1
 
 xset s 360 300 &
-xss-lock -n $HOME/.config/bspwm/suspender.sh -- i3lock -i $HOME/.config/backgrounds/91_red.png -n & 
+xss-lock -n $HOME/.config/bspwm/suspender.sh -- i3lock -i $HOME/.config/backgrounds/91_red.png -n &
 
