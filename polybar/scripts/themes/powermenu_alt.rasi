@@ -1,5 +1,5 @@
 configuration {
-    font:                           "Iosevka Nerd Font 10";
+    font:                           "Hurmit Nerd Font Mono 10";
     show-icons:                     false;
 	icon-theme: 					"Papirus";
     display-drun: 					":";
@@ -20,9 +20,9 @@ window {
     background-color:               @background;
     text-color:                     @foreground;
     border-radius:                  20px;
-    height:                         26%;
+    height:                         23%;
     width:                          12%;
-    x-offset:                       -30;
+    x-offset:                       -10;
     y-offset:                       70;
 }
 
@@ -105,6 +105,8 @@ element-icon {
 
 element-text {
     expand:                         true;
+    text-color:                     @foreground;
+    background-color:               #00000000;
     horizontal-align:               0;
     vertical-align:                 0;
     margin:                         2px 0px 2px 2px;

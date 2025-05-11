@@ -23,7 +23,7 @@ xinput set-prop 'Logitech Wireless Mouse' 'libinput Accel Speed' -0.8
 
 $HOME/.config/polybar/launch.sh
 
-feh --bg-fill $HOME/.config/backgrounds/90.jpg
+feh --bg-fill $HOME/.config/backgrounds/89.jpg
 
 xsetroot -cursor_name left_ptr &
 
