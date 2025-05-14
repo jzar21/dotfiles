@@ -87,3 +87,15 @@ final_space = true
   foreground_templates = ['{{ if gt .Code 0 }}#ef5350{{ end }}']
   always_enabled = true
 
+[[blocks]]
+  type = 'rprompt'
+  overflow = 'hidden'
+
+  [[blocks.segments]]
+    type = 'executiontime'
+    style = 'plain'
+    template = '{{ div .Ms 1000 }}s'
+
+
+    [blocks.segments.properties]
+      threshold = 5000
