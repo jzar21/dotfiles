@@ -40,6 +40,12 @@ final_space = true
     type = 'path'
     style = 'plain'
 
+
+    [blocks.segments.properties]
+      folder_icon = '....'
+      home_icon = '~'
+      style = 'agnoster_short'
+
   [[blocks.segments]]
     template = '{{if .Env.TMUX}}tmux {{end}}'
     foreground = 'yellow'
@@ -47,10 +53,30 @@ final_space = true
     style = 'plain'
 
 
-    [blocks.segments.properties]
-      folder_icon = '....'
-      home_icon = '~'
-      style = 'agnoster_short'
+  [[blocks.segments]]
+    type = "python"
+    style = "plain"
+  foreground = "#3365ff"
+    template = " {{ .Full }} "
+
+  [[blocks.segments]]
+    type = "julia"
+    style = "plain"
+    foreground = "#906cff"
+template = " {{ .Full }} "
+
+  [[blocks.segments]]
+    type = "java"
+    style = "plain"
+    foreground = "#FFCC00"
+    template = " {{ .Full }} " 
+
+  [[blocks.segments]]
+    type = "rust"
+    style = "plain"
+    foreground = "#FF7700"
+    template = " {{ .Full }} "
+
 
   [[blocks.segments]]
     template = "{{ .UpstreamIcon }}{{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }}  {{ .Working.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }}  {{ .Staging.String }}{{ end }}{{ if gt .StashCount 0 }}  {{ .StashCount }}{{ end }}"
