@@ -40,6 +40,13 @@ final_space = true
     type = 'path'
     style = 'plain'
 
+  [[blocks.segments]]
+    template = '{{if .Env.TMUX}}tmux {{end}}'
+    foreground = 'yellow'
+    type = 'text'
+    style = 'plain'
+
+
     [blocks.segments.properties]
       folder_icon = '....'
       home_icon = '~'
