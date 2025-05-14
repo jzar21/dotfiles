@@ -132,6 +132,9 @@ super + alt + {Left,Down,Up,Right}
 super + b
 	firefox
 
+super + e
+	nautilus
+
 # Subir volumen
 XF86AudioRaiseVolume
     pactl set-sink-volume @DEFAULT_SINK@ +5%
