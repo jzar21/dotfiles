@@ -40,18 +40,17 @@ final_space = true
     type = 'path'
     style = 'plain'
 
-
-    [blocks.segments.properties]
-      folder_icon = '....'
-      home_icon = '~'
-      style = 'agnoster_short'
-
   [[blocks.segments]]
     template = '{{if .Env.TMUX}}tmux {{end}}'
     foreground = 'yellow'
     type = 'text'
     style = 'plain'
 
+
+    [blocks.segments.properties]
+      folder_icon = '....'
+      home_icon = '~'
+      style = 'agnoster_short'
 
   [[blocks.segments]]
     type = "python"
@@ -105,7 +104,7 @@ template = " {{ .Full }} "
   newline = true
 
   [[blocks.segments]]
-    template = ''
+    template = '❯'
     type = 'status'
     style = 'plain'
     foreground_templates = ['{{ if gt .Code 0 }}#ef5350{{ end }}']
@@ -114,7 +113,7 @@ template = " {{ .Full }} "
       always_enabled = true
 
 [transient_prompt]
-  template = ' '
+  template = '❯ '
   type = 'status'
   style = 'plain'
   foreground_templates = ['{{ if gt .Code 0 }}#ef5350{{ end }}']
