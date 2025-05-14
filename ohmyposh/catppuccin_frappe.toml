@@ -51,6 +51,8 @@ final_space = true
     type = 'git'
     style = 'plain'
 
+
+
     [blocks.segments.properties]
       source = "cli"
       branch_icon = ' '
