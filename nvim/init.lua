@@ -26,6 +26,7 @@ end
 -- system clipboard, with snap instal nvim --classic not necessary but just in case
 vim.opt.clipboard = "unnamedplus"
 vim.opt.colorcolumn = "80,120"
+vim.opt.scrolloff = 8
 
 require "lazy_setup"
 require "polish"
