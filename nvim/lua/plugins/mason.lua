@@ -14,7 +14,7 @@ return {
         -- install language servers
         "lua-language-server",
         "ruff",
-        "ty",
+        -- "ty",
         "basedpyright",
         "clangd",
         -- install formatters

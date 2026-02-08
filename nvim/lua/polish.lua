@@ -23,3 +23,5 @@ vim.api.nvim_create_autocmd({ "UIEnter", "ColorScheme" }, {
     end)
   end,
 })
+
+vim.api.nvim_set_hl(0, "ColorColumn", { bg = "#404040" }) -- Color of the vline

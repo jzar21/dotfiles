@@ -30,7 +30,7 @@ return {
         LineNr = { bg = color_bg },
         CursorLineNr = { bg = color_bg },
         Pmenu = { bg = color_bg },
-        PmenuSel = { bg = color_bg },
+        -- PmenuSel = { bg = color_bg }, -- autocomplete menu selector not transparent
         NormalFloat = { bg = color_bg },
         FloatBorder = { bg = color_bg },
         BufferLine = { bg = color_bg },
