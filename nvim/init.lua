@@ -27,6 +27,8 @@ end
 vim.opt.clipboard = "unnamedplus"
 vim.opt.colorcolumn = "80,120"
 vim.opt.scrolloff = 8
+vim.o.list = true
+vim.o.listchars = "tab:» ,trail:•,lead:•"
 
 require "lazy_setup"
 require "polish"

@@ -98,9 +98,44 @@
       maximum-scroll-margin 0.8)
 
 ;; Don't wrap lines
-(setq-default truncate-lines t)
+;; (setq-default truncate-lines t)
 
+(map! :leader
+      :desc "Toggle comment on line/region"
+      "/" #'comment-line)
 
+;; Move lines like vscode
+(use-package! drag-stuff
+  :config
+  (drag-stuff-global-mode 1))
+
+(map!
+ :desc "Move line(s) up and down"
+ :n "M-<up>"   #'drag-stuff-up
+ :n "M-<down>" #'drag-stuff-down
+ :v "M-<up>"   #'drag-stuff-up
+ :v "M-<down>" #'drag-stuff-down)
+
+(map!
+ :n "C-h"  #'evil-window-left
+ :n "C-j"  #'evil-window-down
+ :n "C-k"    #'evil-window-up
+ :n "C-l" #'evil-window-right)
+
+(map!
+ :n "C-S-h"  #'evil-window-decrease-width
+ :n "C-S-j" #'evil-window-increase-width
+ :n "C-S-k"    #'evil-window-decrease-height
+ :n "C-S-l"  #'evil-window-increase-height)
+
+(after! lsp-ui
+  (setq lsp-ui-sideline-enable t
+        lsp-ui-sideline-show-diagnostics t
+        lsp-ui-sideline-show-hover t
+        lsp-ui-sideline-show-code-actions t
+        lsp-ui-sideline-update-mode 'point
+        lsp-ui-sideline-delay 0.2
+        lsp-ui-doc-enable nil))
 
 (after! lsp-mode
   ;; Use pyright as default LSP server

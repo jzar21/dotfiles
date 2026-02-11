@@ -25,3 +25,12 @@ vim.api.nvim_create_autocmd({ "UIEnter", "ColorScheme" }, {
 })
 
 vim.api.nvim_set_hl(0, "ColorColumn", { bg = "#404040" }) -- Color of the vline
+
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = { "markdown", "tex", "quarto" },
+  callback = function()
+    -- Ajustes de visualización de líneas
+    vim.opt_local.wrap = true
+    vim.opt_local.linebreak = true
+  end,
+})
