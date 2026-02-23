@@ -26,11 +26,15 @@
 --
 -- vim.api.nvim_set_hl(0, "ColorColumn", { bg = "#404040" }) -- Color of the vline
 
--- vim.api.nvim_create_autocmd("FileType", {
---   pattern = { "markdown", "tex", "quarto" },
---   callback = function()
---     -- Ajustes de visualización de líneas
---     vim.opt_local.wrap = true
---     vim.opt_local.linebreak = true
---   end,
--- })
+vim.api.nvim_create_autocmd("BufWritePre", {
+  pattern = "*",
+  callback = function()
+    local save = vim.fn.winsaveview()
+    vim.cmd [[%s/\s\+$//e]]
+    vim.fn.winrestview(save)
+  end,
+})
+
+vim.opt.wrap = true
+vim.opt.linebreak = true
+vim.opt.breakindent = true

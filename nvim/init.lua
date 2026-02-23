@@ -24,11 +24,14 @@ if not pcall(require, "lazy") then
 end
 
 -- system clipboard, with snap instal nvim --classic not necessary but just in case
-vim.opt.clipboard = "unnamedplus"
+vim.opt.clipboard:append "unnamedplus"
 vim.opt.colorcolumn = "80,120"
 vim.opt.scrolloff = 8
+vim.opt.sidescrolloff = 8
+vim.opt.smartcase = true
 vim.o.list = true
 vim.o.listchars = "tab:» ,trail:•,lead:•"
 
+require "maps"
 require "lazy_setup"
 require "polish"
