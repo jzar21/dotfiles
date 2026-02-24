@@ -1,0 +1,14 @@
+backgrounds|.config/backgrounds
+bspwm|.config/bspwm
+doom|.config/doom
+kitty|.config/kitty
+nvim|.config/nvim
+ohmyposh|.config/ohmyposh
+picom|.config/picom
+polybar|.config/polybar
+rofi|.config/rofi
+sxhkd|.config/sxhkd
+tmux|.config/tmux
+.fehbg|.fehbg
+.zshrc|.zshrc
+.bashrc|.bashrc
