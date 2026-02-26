@@ -48,3 +48,18 @@ ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=8'
 source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 . "$HOME/.local/bin/env"
+
+export NVM_DIR="$HOME/.nvm"
+
+nvm_lazy_load() {
+  unset -f node npm npx nvm
+
+  [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
+  [ -s "$NVM_DIR/bash_completion" ] && . "$NVM_DIR/bash_completion"
+}
+
+node() { nvm_lazy_load; node "$@"; }
+npm()  { nvm_lazy_load; npm "$@"; }
+npx()  { nvm_lazy_load; npx "$@"; }
+nvm()  { nvm_lazy_load; nvm "$@"; }
+
