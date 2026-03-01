@@ -130,7 +130,7 @@ super + alt + {Left,Down,Up,Right}
 	bspc node -v {-20 0,0 20,0 -20,20 0}
 
 super + b
-	firefox
+	brave-browser
 
 super + e
 	nautilus
@@ -155,3 +155,6 @@ XF86MonBrightnessUp
 # Bajar brillo con F4
 XF86MonBrightnessDown
   brightnessctl set 5%-
+
+alt + t
+    $HOME/.config/sxhkd/tmux-rofi.sh
