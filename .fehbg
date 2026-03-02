@@ -1,2 +1,2 @@
 #!/bin/sh
-feh --no-fehbg --bg-fill '$HOME/.config/backgrounds/82.jpg' 
+feh --no-fehbg --bg-fill '/home/juanfran/.config/backgrounds/92.jpg' 

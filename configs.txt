@@ -5,7 +5,7 @@ kitty|.config/kitty
 nvim|.config/nvim
 ohmyposh|.config/ohmyposh
 picom|.config/picom
-polybar|.config/polybar
+polybar/simple/cuts|.config/polybar
 rofi|.config/rofi
 sxhkd|.config/sxhkd
 tmux|.config/tmux
