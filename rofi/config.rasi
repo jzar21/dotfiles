@@ -1,5 +1,5 @@
 configuration {
-    font:                            "Ubuntu 12";
+    font:                            "Ubuntu Regular 12";
     show-icons:                      true;
     icon-theme:                      "Papirus";
     display-drun:                    "";
