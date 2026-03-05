@@ -1,5 +1,13 @@
-//@theme "$HOME/.config/rofi/themes/nord.rasi"
-//@theme "$HOME/.config/rofi/themes/nord.rasi"
-//@theme "/usr/share/rofi/themes/Adapta-Nokto.rasi"
-//@theme "$HOME/.config/rofi/themes/nord.rasi"
-@theme "/usr/share/rofi/themes/gruvbox-dark-hard.rasi"
+configuration {
+    font:                            "Ubuntu 12";
+    show-icons:                      true;
+    icon-theme:                      "Papirus";
+    display-drun:                    "";
+    drun-display-format:             "{name}";
+    disable-history:                 false;
+    fullscreen:                      false;
+    hide-scrollbar:                  true;
+    sidebar-mode:                    false;
+}
+
+@theme "themes/theme.rasi"
