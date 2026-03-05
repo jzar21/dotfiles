@@ -8,7 +8,7 @@ super + Return
 
 # program launcher
 super + d
-	rofi -show run
+	rofi -show drun
 
 # make sxhkd reload its configuration files:
 super + Escape
@@ -158,3 +158,4 @@ XF86MonBrightnessDown
 
 alt + t
     $HOME/.config/sxhkd/tmux-rofi.sh
+
