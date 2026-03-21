@@ -68,7 +68,7 @@ template = " {{ .Full }} "
     type = "java"
     style = "plain"
     foreground = "#FFCC00"
-    template = " {{ .Full }} " 
+    template = " {{ .Full }} "
 
   [[blocks.segments]]
     type = "rust"
