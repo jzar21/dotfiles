@@ -37,5 +37,6 @@ picom &
 xinput set-prop 'ASUE1409:00 04F3:3157 Touchpad' 'libinput Tapping Enabled' 1
 
 xset s 360 300 &
-xss-lock -n $HOME/.config/bspwm/suspender.sh -- i3lock -i $HOME/.config/backgrounds/91_red.png -n &
+xset r rate 250 35 &
+xss-lock --transfer-sleep-lock -n $HOME/.config/bspwm/suspender.sh -- i3lock -i $HOME/.config/backgrounds/91_red.png -n &
 

@@ -12,3 +12,5 @@ tmux|.config/tmux
 .fehbg|.fehbg
 .zshrc|.zshrc
 .bashrc|.bashrc
+./gtk-3.0/settings.ini|.config/gtk-3.0/settings.ini
+./gtk-4.0/settings.ini|.config/gtk-4.0/settings.ini
