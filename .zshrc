@@ -63,3 +63,7 @@ npm()  { nvm_lazy_load; npm "$@"; }
 npx()  { nvm_lazy_load; npx "$@"; }
 nvm()  { nvm_lazy_load; nvm "$@"; }
 
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+# Open in a popup if on tmux or Zellij, otherwise use --height mode
+export FZF_DEFAULT_OPTS='--height 40% --popup bottom,40% --layout reverse --border top'
