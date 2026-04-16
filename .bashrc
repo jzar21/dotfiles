@@ -127,5 +127,5 @@ fi
 . "$HOME/.local/bin/env"
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
-# Open in a popup if on tmux or Zellij, otherwise use --height mode
+# Open in a popup if on tmux or Zellij, otherwise use --height mode No funciona en tmux < 3.3
 export FZF_DEFAULT_OPTS='--height 40% --popup bottom,40% --layout reverse --border top'
