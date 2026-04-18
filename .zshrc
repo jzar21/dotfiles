@@ -34,6 +34,12 @@ alias emacstui="TERM=xterm-256color emacs -nw"
 # Para que con control y flechas se mueva por las palabras
 bindkey "^[[1;5C" forward-word
 bindkey "^[[1;5D" backward-word
+tmux-sessionizer-widget() {
+    BUFFER="$HOME/dotfiles/tmux/tmux-sessionizer"
+    zle accept-line
+}
+zle -N tmux-sessionizer-widget
+bindkey '^f' tmux-sessionizer-widget
 
 # Para el historial
 HISTFILE=~/.zsh_history
