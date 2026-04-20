@@ -3,7 +3,7 @@
 if [[ $# -eq 1 ]]; then
     selected=$1
 else
-    selected=$(find "$HOME" -mindepth 1 -maxdepth 4 -type d | $HOME/.fzf/bin/fzf --height 40% --layout reverse --border top)
+    selected=$(find "$HOME" -mindepth 1 -maxdepth 8 -type d | $HOME/.fzf/bin/fzf --height 40% --layout reverse --border top)
 fi
 
 if [[ -z $selected ]]; then
