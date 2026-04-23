@@ -16,3 +16,6 @@ vim.keymap.set("n", "Y", "y$", { desc = "Yank to the end of the line" })
 
 vim.keymap.set("n", "<C-m>", ":bnext<CR>", { desc = "Next buffer", silent = true })
 vim.keymap.set("n", "<C-n>", ":bprevious<CR>", { desc = "Previous buffer", silent = true })
+
+vim.keymap.set("n", "<C-d>", "<C-d>zz", { desc = "Jumps down centering the cursor", silent = true })
+vim.keymap.set("n", "<C-u>", "<C-u>zz", { desc = "Jumps up centering the cursor", silent = true })

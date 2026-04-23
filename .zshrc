@@ -35,7 +35,7 @@ alias emacstui="TERM=xterm-256color emacs -nw"
 bindkey "^[[1;5C" forward-word
 bindkey "^[[1;5D" backward-word
 tmux-sessionizer-widget() {
-    BUFFER="$HOME/dotfiles/tmux/tmux-sessionizer"
+    BUFFER="$HOME/.config/tmux/tmux-sessionizer"
     zle accept-line
 }
 zle -N tmux-sessionizer-widget

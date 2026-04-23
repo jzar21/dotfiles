@@ -1,25 +1,27 @@
 #!/usr/bin/env bash
 
+set -euo pipefail
+
 if [[ $# -eq 1 ]]; then
-    selected=$1
+    selected="$1"
 else
-    selected=$(find "$HOME" -mindepth 1 -maxdepth 8 -type d | $HOME/.fzf/bin/fzf --height 40% --layout reverse --border top)
+    selected="$(find "$HOME" -mindepth 1 -maxdepth 6 -type d | "$HOME/.fzf/bin/fzf" --height 40% --layout reverse --border top)"
 fi
 
-if [[ -z $selected ]]; then
-    exit 0
+# Salir si no hay selección
+[[ -z "${selected:-}" ]] && exit 0
+
+selected_name="$(basename "$selected" | tr . _)"
+
+# Comprobar si existe la sesión
+if ! tmux has-session -t="$selected_name" 2>/dev/null; then
+    tmux new-session -ds "$selected_name" -c "$selected"
 fi
 
-selected_name=$(basename "$selected" | tr . _)
-tmux_running=$(pgrep tmux)
-
-if [[ -z $TMUX ]] && [[ -z $tmux_running ]]; then
-    tmux new-session -s $selected_name -c $selected
-    exit 0
+# Si estamos dentro de tmux → cambiar cliente
+if [[ -n "${TMUX:-}" ]]; then
+    tmux switch-client -t "$selected_name"
+else
+    # Si estamos fuera → adjuntarse (aunque ya exista servidor)
+    tmux attach-session -t "$selected_name"
 fi
-
-if ! tmux has-session -t=$selected_name 2> /dev/null; then
-    tmux new-session -ds $selected_name -c $selected
-fi
-
-tmux switch-client -t $selected_name
