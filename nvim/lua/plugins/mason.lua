@@ -6,7 +6,8 @@ return {
       "lua-language-server",
       "ruff",
       -- "ty",
-      "pyright",
+      -- "pyright",
+      "pyrefly",
       "clangd",
       -- install formatters
       "stylua",
