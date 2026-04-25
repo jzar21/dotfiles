@@ -17,6 +17,6 @@ vim.api.nvim_create_autocmd("BufWritePre", {
   end,
 })
 
-vim.opt.wrap = true
+vim.opt.wrap = false
 vim.opt.linebreak = true
 vim.opt.breakindent = true
