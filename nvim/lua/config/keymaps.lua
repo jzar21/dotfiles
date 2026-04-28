@@ -22,10 +22,11 @@ vim.keymap.set("n", "<C-u>", "<C-u>zz", { desc = "Jumps up centering the cursor"
 
 local function pcol(above)
   local col = vim.fn.virtcol(".")
+  local count = vim.v.count1
   if above then
-    vim.cmd("normal! P")
+    vim.cmd("normal! " .. count .. "P")
   else
-    vim.cmd("normal! p")
+    vim.cmd("normal! " .. count .. "p")
   end
   vim.fn.cursor(vim.fn.line("."), col)
 end
@@ -51,7 +52,12 @@ vim.keymap.set(
   { desc = "Paste over selection without yanking it (preserve default register)" }
 )
 
-vim.keymap.set("n", "J", "mzJ`z", { desc = "Join lines keeping cursor position", silent = true })
+vim.keymap.set("n", "J", function()
+  local pos = vim.api.nvim_win_get_cursor(0)
+  local count = vim.v.count1
+  vim.cmd("normal! " .. count .. "J")
+  vim.api.nvim_win_set_cursor(0, pos)
+end, { desc = "Join lines keeping cursor position", silent = true })
 
 vim.keymap.set("n", "n", "nzzzv", { desc = "Next search result centered and unfolded", silent = true })
 

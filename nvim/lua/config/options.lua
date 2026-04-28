@@ -20,3 +20,6 @@ vim.api.nvim_create_autocmd("BufWritePre", {
 vim.opt.wrap = false
 vim.opt.linebreak = true
 vim.opt.breakindent = true
+
+vim.opt.incsearch = true
+vim.opt.guicursor = ""
