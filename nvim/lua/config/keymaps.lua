@@ -17,8 +17,24 @@ vim.keymap.set("n", "Y", "y$", { desc = "Yank to the end of the line" })
 vim.keymap.set("n", "<C-m>", ":bnext<CR>zz", { desc = "Next buffer centering the cursor", silent = true })
 vim.keymap.set("n", "<C-n>", ":bprevious<CR>zz", { desc = "Previous buffer centering the cursor", silent = true })
 
+vim.keymap.set(
+  "n",
+  "<A-M>",
+  "<cmd>cnext<CR>zz",
+  { desc = "Next quick fix element centering the cursor", silent = true }
+)
+vim.keymap.set(
+  "n",
+  "<A-N>",
+  "<cmd>cprev<CR>zz",
+  { desc = "Prev quick fix element centering the cursor", silent = true }
+)
+
 vim.keymap.set("n", "<C-d>", "<C-d>zz", { desc = "Jumps down centering the cursor", silent = true })
 vim.keymap.set("n", "<C-u>", "<C-u>zz", { desc = "Jumps up centering the cursor", silent = true })
+
+vim.keymap.set("n", "<C-o>", "<C-o>zz")
+vim.keymap.set("n", "<C-i>", "<C-i>zz")
 
 local function pcol(above)
   local col = vim.fn.virtcol(".")

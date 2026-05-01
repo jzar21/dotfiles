@@ -8,14 +8,6 @@ vim.opt.sidescrolloff = 8
 vim.opt.smartcase = true
 vim.o.list = true
 vim.o.listchars = "tab:» ,trail:•,lead:•"
-vim.api.nvim_create_autocmd("BufWritePre", {
-  pattern = "*",
-  callback = function()
-    local save = vim.fn.winsaveview()
-    vim.cmd([[%s/\s\+$//e]])
-    vim.fn.winrestview(save)
-  end,
-})
 
 vim.opt.wrap = false
 vim.opt.linebreak = true
