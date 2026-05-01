@@ -7,7 +7,7 @@ vim.opt.scrolloff = 8
 vim.opt.sidescrolloff = 8
 vim.opt.smartcase = true
 vim.o.list = true
-vim.o.listchars = "tab:» ,trail:•,lead:•"
+vim.opt.listchars = { tab = "» ", trail = "·", nbsp = "␣" }
 
 vim.opt.wrap = false
 vim.opt.linebreak = true
