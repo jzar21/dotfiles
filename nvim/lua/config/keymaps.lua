@@ -83,3 +83,7 @@ vim.keymap.set("n", "<leader>tf", function()
   vim.g.autoformat = not vim.g.autoformat
   print("Autoformat: " .. (vim.g.autoformat and "ON" or "OFF"))
 end, { desc = "Toggle autoformat on save" })
+
+vim.keymap.set("n", "<leader>fw", function()
+  vim.api.nvim_feedkeys("/", "n", false)
+end, { desc = "Search in current file" })
