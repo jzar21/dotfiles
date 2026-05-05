@@ -87,3 +87,10 @@ end, { desc = "Toggle autoformat on save" })
 vim.keymap.set("n", "<leader>fw", function()
   vim.api.nvim_feedkeys("/", "n", false)
 end, { desc = "Search in current file" })
+
+vim.keymap.set("n", "<leader>e", function()
+  Snacks.explorer({
+    hidden = true,
+    ignored = true,
+  })
+end, { desc = "Explorer" })
