@@ -120,11 +120,11 @@ vim.keymap.set("n", "<leader>sG", LazyVim.pick("live_grep"), { desc = "Grep (Roo
 vim.keymap.set("n", "<leader>sg", LazyVim.pick("live_grep", { root = false }), { desc = "Grep (cwd)" })
 
 vim.keymap.set({ "n", "x", "v" }, "<leader>sW", function()
-  Snacks.picker.grep_word({ word_match = "-w" })
+  Snacks.picker.grep_word({ cwd = LazyVim.root(), word_match = "-w" })
 end, { desc = "Word (Root Dir)" })
 
 vim.keymap.set({ "n", "x", "v" }, "<leader>sw", function()
-  Snacks.picker.grep_word({ root = false, word_match = "-w" })
+  Snacks.picker.grep_word({ word_match = "-w" })
 end, { desc = "Word (cwd)" })
 
 local harpoon = require("harpoon")
