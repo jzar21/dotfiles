@@ -88,9 +88,68 @@ vim.keymap.set("n", "<leader>fw", function()
   vim.api.nvim_feedkeys("/", "n", false)
 end, { desc = "Search in current file" })
 
+vim.keymap.set("n", "<leader>/", "gcc", { remap = true, desc = "Toggle comment line" })
+vim.keymap.set("x", "<leader>/", "gc", { remap = true, desc = "Toggle comment selection" })
+
 vim.keymap.set("n", "<leader>e", function()
   Snacks.explorer({
     hidden = true,
     ignored = true,
   })
-end, { desc = "Explorer" })
+end, { desc = "Explorer (cwd)" })
+
+vim.keymap.set("n", "<leader>E", function()
+  Snacks.explorer({
+    hidden = true,
+    ignored = true,
+    cwd = LazyVim.root(),
+  })
+end, { desc = "Explorer (Root Dir)" })
+
+vim.keymap.set(
+  "n",
+  "<leader><space>",
+  LazyVim.pick("files", { root = false }),
+  { remap = true, desc = "Find Files (cwd)" }
+)
+
+vim.keymap.set("n", "<leader>ff", LazyVim.pick("files", { root = false }), { desc = "Find Files (cwd)" })
+vim.keymap.set("n", "<leader>fF", LazyVim.pick("files"), { desc = "Find Files (Root Dir)" })
+
+vim.keymap.set("n", "<leader>sG", LazyVim.pick("live_grep"), { desc = "Grep (Root Dir)" })
+vim.keymap.set("n", "<leader>sg", LazyVim.pick("live_grep", { root = false }), { desc = "Grep (cwd)" })
+
+vim.keymap.set({ "n", "x", "v" }, "<leader>sW", function()
+  Snacks.picker.grep_word({ word_match = "-w" })
+end, { desc = "Word (Root Dir)" })
+
+vim.keymap.set({ "n", "x", "v" }, "<leader>sw", function()
+  Snacks.picker.grep_word({ root = false, word_match = "-w" })
+end, { desc = "Word (cwd)" })
+
+local harpoon = require("harpoon")
+
+vim.keymap.set("n", "<leader>a", function()
+  print("File added to harpoon")
+  harpoon:list():add()
+end, { desc = "Harpoon Add File" })
+
+vim.keymap.set("n", "<leader>h", function()
+  harpoon:list():select(1)
+end, { desc = "Harpoon File 1" })
+
+vim.keymap.set("n", "<leader>j", function()
+  harpoon:list():select(2)
+end, { desc = "Harpoon File 2" })
+
+vim.keymap.set("n", "<leader>k", function()
+  harpoon:list():select(3)
+end, { desc = "Harpoon File 3" })
+
+vim.keymap.set("n", "<leader>l", function()
+  harpoon:list():select(4)
+end, { desc = "Harpoon File 4" })
+
+vim.keymap.set("n", "<C-e>", function()
+  harpoon.ui:toggle_quick_menu(harpoon:list())
+end)
