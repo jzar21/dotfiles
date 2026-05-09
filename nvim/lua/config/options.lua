@@ -16,3 +16,5 @@ vim.opt.breakindent = true
 vim.opt.incsearch = true
 vim.opt.guicursor = ""
 vim.opt.conceallevel = 0
+vim.opt.splitbelow = false
+vim.opt.splitright = true
