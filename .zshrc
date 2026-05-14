@@ -13,9 +13,10 @@
 export PATH="$HOME/.juliaup/bin:$HOME/.local/bin/:$PATH"
 export PATH="$HOME/.config/emacs/bin:$PATH"
 
-if [ "$TERM_PROGRAM" != "Apple_Terminal" ]; then
-  eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/catppuccin_frappe.toml)"
-fi
+# if [ "$TERM_PROGRAM" != "Apple_Terminal" ]; then
+#   eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/catppuccin_frappe.toml)"
+# fi
+eval "$(starship init zsh)"
 
 # alias ls='ls --color=auto'
 alias ls='lsd'
