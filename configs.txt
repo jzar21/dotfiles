@@ -15,4 +15,5 @@ tmux|.config/tmux
 ./gtk-3.0/settings.ini|.config/gtk-3.0/settings.ini
 ./gtk-4.0/settings.ini|.config/gtk-4.0/settings.ini
 tmux-sessionizer|.config/tmux-sessionizer
+tmux-sessionizer/tmux-sessionizer|.local/bin/tmux-sessionizer
 starship.toml|.config/starship.toml

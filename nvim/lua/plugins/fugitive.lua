@@ -1,7 +1,7 @@
 return {
   "tpope/vim-fugitive",
   config = function()
-    vim.keymap.set("n", "<leader>gg", vim.cmd.Git)
+    vim.keymap.set("n", "<leader>gg", vim.cmd.Git, { desc = "Vim-fugitive" })
 
     local autocmd = vim.api.nvim_create_autocmd
     autocmd("BufWinEnter", {

@@ -10,7 +10,7 @@
 # # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 # [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-export PATH="$HOME/.juliaup/bin:$HOME/.local/bin/:$PATH"
+export PATH="$HOME/.juliaup/bin:$HOME/.local/bin:$PATH"
 export PATH="$HOME/.config/emacs/bin:$PATH"
 
 # if [ "$TERM_PROGRAM" != "Apple_Terminal" ]; then
@@ -19,7 +19,8 @@ export PATH="$HOME/.config/emacs/bin:$PATH"
 eval "$(starship init zsh)"
 
 # alias ls='ls --color=auto'
-alias ls='lsd'
+# alias ls='lsd'
+alias ls='eza -l --icons --group-directories-first'
 alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
@@ -36,7 +37,7 @@ alias emacstui="TERM=xterm-256color emacs -nw"
 bindkey "^[[1;5C" forward-word
 bindkey "^[[1;5D" backward-word
 tmux-sessionizer-widget() {
-    BUFFER="$HOME/.config/tmux-sessionizer/tmux-sessionizer"
+    BUFFER="$HOME/.local/bin/tmux-sessionizer"
     zle accept-line
 }
 zle -N tmux-sessionizer-widget
