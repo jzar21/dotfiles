@@ -109,7 +109,7 @@ end, { desc = "Explorer (Root Dir)" })
 vim.keymap.set(
   "n",
   "<leader><space>",
-  LazyVim.pick("files", { root = false }),
+  LazyVim.pick("files", { root = false, hidden = true }),
   { remap = true, desc = "Find Files (cwd)" }
 )
 
