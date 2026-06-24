@@ -62,6 +62,13 @@ vim.keymap.set(
 )
 
 vim.keymap.set(
+  "n",
+  "<leader>R",
+  [[:%s/\V<C-r>=escape(expand('<cWORD>'), '/\')<CR>/<C-r><C-A>/gI<Left><Left><Left>]],
+  { desc = "Substitute WORD under cursor globally" }
+)
+
+vim.keymap.set(
   "x",
   "<leader>p",
   [["_dP]],
