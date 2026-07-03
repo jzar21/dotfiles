@@ -55,7 +55,7 @@ source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=8'
 source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
-. "$HOME/.local/bin/env"
+# . "$HOME/.local/bin/env"
 
 export NVM_DIR="$HOME/.nvm"
 

@@ -1,6 +1,9 @@
 #! /bin/sh
 
 export _JAVA_AWT_WM_NONREPARENTING=1
+export XDG_SESSION_TYPE=x11
+export GDK_BACKEND=x11
+export QT_QPA_PLATFORM=xcb
 
 pgrep -x sxhkd > /dev/null || sxhkd &
 
@@ -26,8 +29,8 @@ bspc rule -a Kupfer.py focus=on
 bspc rule -a Screenkey manage=off
 bspc config focus_follows_pointer true
 
-xinput set-prop 'ASUE1409:00 04F3:3157 Touchpad' 'libinput Natural Scrolling Enabled' 1
-xinput set-prop 'Logitech Wireless Mouse' 'libinput Accel Speed' -0.8
+# xinput set-prop 'ASUE1409:00 04F3:3157 Touchpad' 'libinput Natural Scrolling Enabled' 1
+# xinput set-prop 'Logitech Wireless Mouse' 'libinput Accel Speed' -0.8
 
 $HOME/.config/polybar/launch.sh
 
@@ -37,7 +40,7 @@ feh --bg-fill $HOME/.config/backgrounds/dark-elegant-pattern.jpg
 xsetroot -cursor_name left_ptr &
 
 picom &
-xinput set-prop 'ASUE1409:00 04F3:3157 Touchpad' 'libinput Tapping Enabled' 1
+# xinput set-prop 'ASUE1409:00 04F3:3157 Touchpad' 'libinput Tapping Enabled' 1
 
 xset s 360 300 &
 xset r rate 250 35 &
