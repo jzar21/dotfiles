@@ -29,7 +29,7 @@ alias la='ls -aa'
 alias li='ls -liaa'
 alias vi='nvim'
 alias vim='nvim'
-alias cat='batcat --paging=never -p'
+alias cat='bat --paging=never -p'
 alias emacs="emacsclient -c -a 'emacs'"
 alias emacstui="TERM=xterm-256color emacs -nw"
 
