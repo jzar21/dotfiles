@@ -1,0 +1,32 @@
+[global]
+    monitor = 0
+    follow = mouse
+    width = 600
+    height = 200
+    origin = top-center
+    offset = 10x50
+    scale = 0
+    frame_width = 2
+    frame_color = "#89b4fa"
+    separator_color = "#585b70"
+    corner_radius = 10
+    font = Monospace 10
+    format = "<b>%s</b>\n%b"
+
+    timeout = 10
+    urgency_low = 3
+    urgency_normal = 5
+    urgency_critical = 0
+
+[urgency_low]
+    background = "#1e1e2e"
+    foreground = "#cdd6f4"
+
+[urgency_normal]
+    background = "#313244"
+    foreground = "#cdd6f4"
+
+[urgency_critical]
+    background = "#f38ba8"
+    foreground = "#11111b"
+

@@ -20,9 +20,11 @@ bspc config gapless_monocle      true
 bspc rule -a Gimp desktop='^8' state=floating follow=on
 bspc rule -a Brave-browser desktop='^1'
 bspc rule -a Org.gnome.Nautilus desktop='^4'
+bspc rule -a org.gnome.Nautilus desktop='^4'
 bspc rule -a thunderbird desktop='^5'
 bspc rule -a KeePassXC desktop='^10'
 bspc rule -a okular desktop='^3'
+bspc rule -a papers desktop='^3'
 bspc rule -a Code desktop='^8'
 bspc rule -a mplayer2 state=floating
 bspc rule -a Kupfer.py focus=on
@@ -44,5 +46,6 @@ picom &
 
 xset s 360 300 &
 xset r rate 250 35 &
-xss-lock --transfer-sleep-lock -n $HOME/.config/bspwm/suspender.sh -- i3lock -i $HOME/.config/backgrounds/91_red.png -n &
+# xss-lock --transfer-sleep-lock -n $HOME/.config/bspwm/suspender.sh -- i3lock -i $HOME/.config/backgrounds/91_red.png -n &
+xss-lock --transfer-sleep-lock -- i3lock -i $HOME/.config/backgrounds/91_red.png -n &
 

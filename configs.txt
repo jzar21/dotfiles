@@ -17,3 +17,4 @@ tmux|.config/tmux
 tmux-sessionizer|.config/tmux-sessionizer
 tmux-sessionizer/tmux-sessionizer|.local/bin/tmux-sessionizer
 starship.toml|.config/starship.toml
+dunst|.config/dunst
