@@ -159,3 +159,6 @@ XF86MonBrightnessDown
 alt + t
     $HOME/.config/sxhkd/tmux-rofi.sh
 
+Print
+    flameshot gui
+
