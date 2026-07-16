@@ -12,6 +12,7 @@
 
 export PATH="$HOME/.juliaup/bin:$HOME/.local/bin:$PATH"
 export PATH="$HOME/.config/emacs/bin:$PATH"
+export MANPAGER='nvim +Man!'
 
 # if [ "$TERM_PROGRAM" != "Apple_Terminal" ]; then
 #   eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/catppuccin_frappe.toml)"
