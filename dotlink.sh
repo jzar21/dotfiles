@@ -4,6 +4,8 @@ set -e
 DOTFILES="$(cd "$(dirname "$0")" && pwd)"
 LIST="$DOTFILES/configs.txt"
 
+git submodule update --init --recursive
+
 while IFS='|' read -r src dst url; do
     [ -z "$src" ] && continue
     [ -z "$dst" ] && continue
